@@ -9,6 +9,8 @@ module Lita
       end
 
       def get_random_meme(response)
+      	r = http.get("https://api.imgflip.com/get_memes")
+      	response.reply r
       end
 
 
