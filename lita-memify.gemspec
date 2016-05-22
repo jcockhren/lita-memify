@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jurnell.cockhren@sophicware.com"]
   spec.description   = "This is our new handler"
   spec.summary       = "Add a summary"
-  spec.homepage      = "Add a homepage"
+  spec.homepage      = "https://github.com/jcockhren/lita-memify"
   spec.license       = "TAdd a license"
   spec.metadata      = { "lita_plugin_type" => "handler" }
 
