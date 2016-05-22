@@ -1,9 +1,13 @@
 module Lita
   module Handlers
     class Memify < Handler
-      # insert handler code here
-
+      route(/^hello/, :do_something, help: {"hello" => "Says hello back"})
+           
+     def do_something(response)
+     	
+     end
       Lita.register_handler(self)
     end
+
   end
 end
