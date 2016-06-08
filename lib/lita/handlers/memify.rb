@@ -10,7 +10,12 @@ module Lita
 
       def get_random_meme(message)
       	response = http.get("https://api.imgflip.com/get_memes")
-      	message.reply "This is an excellent reply ->#{response.body}<-"
+        rick = ""
+        response.body["data"]["memes"].each do |meme|
+        rick = "a" + rick
+        end
+
+      	message.reply "This is an excellent reply ->#{rick}<-"
       end
 
 
