@@ -18,8 +18,9 @@ module Lita
           rick = rick + meme["name"] + "\n"
 
         end
+       found_meme = parse_response["data"]["memes"].sample
 
-      	message.reply "This is an excellent reply ->#{rick}<-"
+      	message.reply "This is an excellent reply ->#{found_meme['name']}<-"
       end
 
 
