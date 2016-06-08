@@ -1,3 +1,5 @@
+require 'json'
+
 module Lita
   module Handlers
     class Memify < Handler
@@ -11,11 +13,12 @@ module Lita
       def get_random_meme(message)
       	response = http.get("https://api.imgflip.com/get_memes")
         rick = ""
-        #response.body["data"]["memes"].each do |meme|
-        #rick = "a" + rick
-        #end
+        parse_response = JSON.parse(response.body)
+        response.body["data"]["memes"].each do |meme|
+        rick = "a" + rick
+        end
 
-      	message.reply "This is an excellent reply ->#{response.body['data']}<-"
+      	message.reply "This is an excellent reply ->#{rick}<-"
       end
 
 
