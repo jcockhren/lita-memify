@@ -20,7 +20,7 @@ module Lita
         end
        found_meme = parse_response["data"]["memes"].sample
 
-      	message.reply "This is an excellent reply ->#{found_meme['name']}<-"
+      	message.reply found_meme['url']
       end
 
 
