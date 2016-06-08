@@ -8,9 +8,9 @@ module Lita
      	  response.reply ("Hello there")
       end
 
-      def get_random_meme(response)
-      	r = http.get("https://api.imgflip.com/get_memes")
-      	response.reply "This is an excellent reply ->#{r}<-"
+      def get_random_meme(message)
+      	response = http.get("https://api.imgflip.com/get_memes")
+      	message.reply "This is an excellent reply ->#{response.body}<-"
       end
 
 
