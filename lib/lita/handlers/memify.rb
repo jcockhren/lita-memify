@@ -15,7 +15,7 @@ module Lita
         rick = "a" + rick
         end
 
-      	message.reply "This is an excellent reply ->#{rick}<-"
+      	message.reply "This is an excellent reply ->#{response.body['data']}<-"
       end
 
 
