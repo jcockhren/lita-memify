@@ -15,7 +15,8 @@ module Lita
         rick = ""
         parse_response= JSON.parse(response.body)
         parse_response["data"]["memes"].each do |meme|
-        rick = "a" + rick
+          rick = rick + meme["name"] + "\n"
+
         end
 
       	message.reply "This is an excellent reply ->#{rick}<-"
